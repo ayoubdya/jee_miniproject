@@ -1,0 +1,60 @@
+<div style="background-image: linear-gradient(#ffffff,#ffffff); width: 100%">
+  <div style="background-image: linear-gradient(#e5eeee, #e5eeee); padding-bottom: 1px; color:#0b0c0c;
+              font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+              Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;">
+    <div style="margin: 20px;">
+
+      <img src="{{ image_data }}" width="80%" alt=""
+           style="display: block; padding-top: 20px; margin-left: auto; margin-right: auto; max-width: 500px;" />
+
+      <div style="text-align: center; padding-top: 20px; width: 100%">
+        <h1 style="margin-bottom: 5px;">Hi {{ name }},</h1>
+        <p style="padding: 0 20%; margin-bottom: 20px;">We are sorry to inform you that your registration request has been <span style="color: rgb(129, 0, 0);"><b>REJECTED</b></span>.
+          The reason for the rejection of your request is written below.</p>
+
+        <div style="background-color: white; margin-bottom: 20px; padding: 20px;
+            box-shadow: 0 2px 10px 0 rgba(131, 131, 131, 0.2), 0 2px 10px 0 rgba(131, 131, 131, 0.2);">
+          <div style="Margin:0 0 20px 0;">
+            <p style="text-indent:1cm; text-align: left;">{{ reason }}</p>
+          </div>
+        </div>
+
+        <p  style="padding: 0 20%; margin: 0;">With regards,</p>
+        <p  style="padding: 0 20%; margin: 0; color: black;">The pecaj.ga team</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 0 20px; display: flex; flex-direction: row; font-family: Helvetica, Arial, sans-serif;">
+    <div style="text-align: right; padding: 0 30px; width: 50%; border-right: 1px solid rgb(189, 189, 189);">
+      <h2>Do you want to advertise your own rentals?</h2>
+      If so, head over to our website and register as a property owner.
+    </div>
+
+    <div style="padding: 0 30px; width: 50%;">
+      <h2>Do you want to browse some more rentals?</h2>
+      If so, head over to our website and search for rentals near you.
+    </div>
+  </div>
+  <div style="display: flex; flex-direction: row;">
+    <div style="text-align: right; padding: 0 30px; width: 50%; border-right: 1px solid rgb(189, 189, 189);">
+      <a href="http://www.pecaj.ga/register" style="text-decoration: none; cursor: pointer;">
+        <button
+                style="display: inline; cursor: pointer; margin: 20px auto 40px;
+                        background-color: black; color: white; width: 110px; padding: 10px; font-size: medium; border-radius: 8px;">
+          Register
+        </button>
+      </a>
+    </div>
+
+    <div style="padding: 0 30px; width: 50%;">
+      <a href="http://www.pecaj.ga" style="text-decoration: none; cursor: pointer; ">
+        <button
+                style="display: inline; cursor: pointer; margin: 20px auto 40px;
+                      background-color: black; color: white; width: 110px; padding: 10px; font-size: medium; border-radius: 8px;">
+          Browse
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
