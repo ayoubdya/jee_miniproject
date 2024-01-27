@@ -41,7 +41,7 @@ const AdventureInfoEditor = () => {
   const createAd = () => {
     post(`/api/ads/adventures`, {
       description: description,
-      cancellationFee: cancellationFee,
+      cancellationFee: 10,
       title: title,
       capacity: capacity,
       currency: currency,
@@ -60,7 +60,7 @@ const AdventureInfoEditor = () => {
         latitude: currentPosition.lat,
         longitude: currentPosition.lng % 180,
       },
-      fishingEquipmentNames: fishingEquipment.split(/[\s,]+/),
+      fishingEquipmentNames: ["rod", "bait", "net"],
       tagNames: tags.split(/[\s,]+/),
       options: Array.from(optionsInputFields),
       photoIds: photoIds,
@@ -460,7 +460,7 @@ const AdventureInfoEditor = () => {
           />
         </div>
 
-        <div className="block col-span-1 text-left">
+        <div className="hidden col-span-1 text-left">
           <label className="text-xs">cancellation fee</label>
           <input
             placeholder="cancellation fee"

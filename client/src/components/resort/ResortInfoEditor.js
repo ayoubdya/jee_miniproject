@@ -45,7 +45,7 @@ const ResortInfoEditor = () => {
   const createAd = () => {
     post(`/api/ads/resorts`, {
       description: description,
-      cancellationFee: cancellationFee,
+      cancellationFee: 10,
       title: title,
       capacity: capacity,
       bedCountPerRoom: bedCountPerRoom,
@@ -65,8 +65,8 @@ const ResortInfoEditor = () => {
       tagNames: tags.split(/[\s,]+/),
       options: Array.from(optionsInputFields),
       photoIds: photoIds,
-      checkInTime: checkInTime,
-      checkOutTime: checkOutTime,
+      checkInTime: "10:00",
+      checkOutTime: "19:00",
       availableAfter: availableAfter,
       availableUntil: availableUntil,
     })
@@ -491,7 +491,7 @@ const ResortInfoEditor = () => {
           />
         </div>
 
-        <div className="block col-span-1 text-left">
+        <div className="hidden col-span-1 text-left">
           <label className="text-xs">cancellation fee</label>
           <input
             placeholder="cancellation fee"
@@ -521,7 +521,7 @@ const ResortInfoEditor = () => {
       </div>
 
       {/* Check in and check out */}
-      <h2 className="flex text-xl text-left text-gray-800 font-sans mt-6 pt-6">
+      {/* <h2 className="flex text-xl text-left text-gray-800 font-sans mt-6 pt-6">
         <Icon
           className="mr-2"
           icon="tabler:clock"
@@ -556,7 +556,7 @@ const ResortInfoEditor = () => {
     focus:outline-none focus:border-gray-500 w-full caret-gray-700"
           />
         </div>
-      </div>
+      </div> */}
 
       {/* Availability */}
       <h2 className="flex text-xl text-left text-gray-800 font-sans mt-6 pt-6">

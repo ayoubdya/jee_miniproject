@@ -76,7 +76,7 @@ const BoatInfoUpdateEditor = ({ data, advertisementId }) => {
   const updateAd = () => {
     put(`/api/ads/boats/${advertisementId}`, {
       description: description,
-      cancellationFee: cancellationFee,
+      cancellationFee: 10,
       title: title,
       capacity: capacity,
       currency: currency,
@@ -92,18 +92,18 @@ const BoatInfoUpdateEditor = ({ data, advertisementId }) => {
         latitude: currentPosition.lat,
         longitude: currentPosition.lng % 180,
       },
-      fishingEquipmentNames: fishingEquipment.split(/[\s,]+/),
-      navigationalEquipmentNames: navigationalEquipment.split(/[\s,]+/),
+      fishingEquipmentNames: ["Fishing rod", "Fishing net", "Bait"],
+      navigationalEquipmentNames: ["GPS", "Fishfinder", "Radio"],
       tagNames: tags.split(/[\s,]+/),
       options: Array.from([...optionsInputFields, ...newOptionsInputFields]),
       photoIds: photoIds,
-      boatType: boatType,
+      boatType: "JETSKI",
       boatLength: boatLength,
-      engineNumber: engineNumber,
+      engineNumber: 1,
       enginePower: enginePower,
       boatSpeed: boatSpeed,
-      checkInTime: checkInTime,
-      checkOutTime: checkOutTime,
+      checkInTime: "10:00",
+      checkOutTime: "19:00",
     })
       .then((response) => {
         navigate(`/boat/${advertisementId}`);
@@ -721,7 +721,7 @@ const BoatInfoUpdateEditor = ({ data, advertisementId }) => {
       </div>
 
       {/* Check in and check out */}
-      <h2 className="flex text-xl text-left text-gray-800 font-sans mt-12">
+      {/* <h2 className="flex text-xl text-left text-gray-800 font-sans mt-12">
         <Icon
           className="mr-2"
           icon="tabler:clock"
@@ -757,7 +757,7 @@ const BoatInfoUpdateEditor = ({ data, advertisementId }) => {
     focus:outline-none focus:border-gray-500 w-full caret-gray-700"
           />
         </div>
-      </div>
+      </div> */}
 
       {/* confirm button */}
       <div className="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 md:gap-x-3 mt-4">

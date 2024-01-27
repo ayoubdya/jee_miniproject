@@ -88,8 +88,8 @@ const ResortInfoUpdateEditor = ({ data, advertisementId }) => {
       tagNames: tags.split(/[\s,]+/),
       options: Array.from([...optionsInputFields, ...newOptionsInputFields]),
       photoIds: photoIds,
-      checkInTime: checkInTime,
-      checkOutTime: checkOutTime,
+      checkInTime: "10:00",
+      checkOutTime: "14:00",
     })
       .then((response) => {
         navigate(`/resort/${advertisementId}`);
@@ -654,7 +654,7 @@ const ResortInfoUpdateEditor = ({ data, advertisementId }) => {
       </div>
 
       {/* Check in/out */}
-      <h2 className="flex text-xl text-left text-gray-800 font-sans mt-12">
+      {/* <h2 className="flex text-xl text-left text-gray-800 font-sans mt-12">
         <Icon
           className="mr-2"
           icon="tabler:clock"
@@ -690,7 +690,7 @@ const ResortInfoUpdateEditor = ({ data, advertisementId }) => {
     focus:outline-none focus:border-gray-500 w-full caret-gray-700"
           />
         </div>
-      </div>
+      </div> */}
 
       {/* confirm button */}
       <div className="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 md:gap-x-3 mt-4">

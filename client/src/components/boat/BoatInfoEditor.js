@@ -48,7 +48,7 @@ const BoatInfoEditor = () => {
   const createAd = () => {
     post(`/api/ads/boats`, {
       description: description,
-      cancellationFee: cancellationFee,
+      cancellationFee: 10,
       title: title,
       capacity: capacity,
       currency: currency,
@@ -76,8 +76,8 @@ const BoatInfoEditor = () => {
       engineNumber: 1,
       enginePower: enginePower,
       boatSpeed: boatSpeed,
-      checkInTime: checkIn,
-      checkOutTime: checkOut,
+      checkInTime: "10:00",
+      checkOutTime: "19:00",
     })
       .then((response) => {
         navigate(`/boat/${response.data.id}`);
@@ -546,7 +546,7 @@ const BoatInfoEditor = () => {
           />
         </div>
 
-        <div className="block col-span-1 text-left">
+        <div className="hidden col-span-1 text-left">
           <label className="text-xs">cancellation fee</label>
           <input
             placeholder="cancellation fee"
@@ -576,7 +576,7 @@ const BoatInfoEditor = () => {
       </div>
 
       {/* Check in and check out */}
-      <h2 className="flex text-xl text-left text-gray-800 font-sans mt-6 pt-6">
+      {/* <h2 className="flex text-xl text-left text-gray-800 font-sans mt-6 pt-6">
         <Icon
           className="mr-2"
           icon="tabler:clock"
@@ -611,7 +611,7 @@ const BoatInfoEditor = () => {
     focus:outline-none focus:border-gray-500 w-full caret-gray-700"
           />
         </div>
-      </div>
+      </div> */}
 
       {/* Availability */}
       <h2 className="flex text-xl text-left text-gray-800 font-sans mt-6 pt-6">
