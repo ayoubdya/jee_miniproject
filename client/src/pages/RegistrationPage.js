@@ -663,9 +663,9 @@ const RegistrationPage = () => {
               <h1 className="text-2xl sm:text-3xl tracking-widest text-center">
                 Welcome!
               </h1>
-              <h3 className="text-lg sm:text-xl tracking-widest text-center mt-1">
+              {/* <h3 className="text-lg sm:text-xl tracking-widest text-center mt-1">
                 Please check your email address for the confirmation link.
-              </h3>
+              </h3> */}
             </div>
           )}
           {selectedRole === "advertiser" && (
